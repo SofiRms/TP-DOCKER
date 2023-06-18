@@ -21,9 +21,9 @@ services:
       - mi-mariadb
     command: npm run dev
     environment:
-      # - DB_HOST= mi-mariadb
-      - DB_PORT= 4000
-      - DB_USER= root
-      - DB_PASSWORD= mypassword
-      - DB_NAME= libros
+      - DB_HOST=mi-mariadb
+      - PORT=4000
+      - DB_USER=root
+      - DB_PASSWORD=mypassword
+      - DB_NAME=libros
 

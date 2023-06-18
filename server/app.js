@@ -2,10 +2,11 @@ const express = require('express')
 const cors = require('cors')
 const morgan = require('morgan')
 
-const PORT =3000
+require('dotenv').config();
+
+const PORT = process.env.PORT 
 const app = express()
 
-require('dotenv').config();
 
 //para comprobar nms
 console.log(process.env.DB_HOST)

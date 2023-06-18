@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  mi-mariadb:
+  #imagen a utilizar
+    image: mariadb
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=mypassword
+      - MYSQL_DATABASE=libros
+
+  books_back_end:
+    build:
+    # carpeta donde se encuentra el servidor
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - 4000:4000
+    depends_on:
+      - mi-mariadb
+    command: npm run dev
+    environment:
+      # - DB_HOST= mi-mariadb
+      - DB_PORT= 4000
+      - DB_USER= root
+      - DB_PASSWORD= mypassword
+      - DB_NAME= libros
+

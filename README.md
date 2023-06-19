@@ -1,3 +1,4 @@
 # TP-DOCKER
 
-Ejecutar con el comando "npm run dev"
+Carpeta del cliente en la rama "front"
+Ejecutar con comando "npm run dev".
